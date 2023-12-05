@@ -1,8 +1,8 @@
 # Calcite Codemod
 
 This is a small (unofficial) package for automatically updating code after breaking changes to Calcite Design System packages.
-The major version of this package will always align with the major version of `@esri/calcite-components` that it targets.
-However, this package may not be updated for every major release of `@esri/calcite-components`.
+The major version of this package will always align with the major version of [`@esri/calcite-components`](https://www.npmjs.com/package/@esri/calcite-components) that it targets.
+However, this package may not be updated for every major release of [`@esri/calcite-components`](https://www.npmjs.com/package/@esri/calcite-components).
 
 The current iteration of this package renames the CSS variables used to modify the styles of Calcite Components.
 Please read the [v2 changelog section of Calcite Components](https://github.com/Esri/calcite-design-system/blob/main/packages/calcite-components/package.json) for a full list of breaking changes.
@@ -57,9 +57,20 @@ Add this to your application so you can update to Calcite Components v2 before r
 
 ```html
 <!-- index.html -->
-<script type="module" src="https://cdn.jsdelivr.net/npm/@esri/calcite-components@v2/dist/calcite/calcite.esm.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@esri/calcite-components@v2/dist/calcite/calcite.css" />
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@ben-elan/calcite-codemod@v2/dist/legacy-tokens.css" />
+<script
+  type="module"
+  src="https://cdn.jsdelivr.net/npm/@esri/calcite-components@v2/dist/calcite/calcite.esm.js"
+></script>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@esri/calcite-components@v2/dist/calcite/calcite.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@ben-elan/calcite-codemod@v2/dist/legacy-tokens.css"
+/>
 ```
 
 > **NOTE:**: Make sure to add `legacy-tokens.css` after `calcite.css`

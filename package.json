@@ -1,7 +1,23 @@
 {
   "name": "@ben-elan/calcite-codemod",
   "version": "2.0.0",
-  "description": "Codemod scripts for automatically updating after breaking changes to Calcite Design System",
+  "description": "Codemod scripts for automatically updating applications after breaking changes to Calcite Design System packages",
+  "keywords": [
+    "calcite",
+    "calcite-components",
+    "calcite-design-system",
+    "cli",
+    "codemod",
+    "node"
+  ],
+  "homepage": "https://github.com/benelan/calcite-codemod",
+  "bugs": {
+    "url": "https://github.com/benelan/calcite-codemod/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benelan/calcite-codemod.git"
+  },
   "license": "MIT",
   "author": "Ben Elan",
   "main": "./dist/index.js",
