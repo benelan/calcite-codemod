@@ -28,8 +28,8 @@
     "dist/"
   ],
   "scripts": {
-    "build": "esbuild ./src/index.js --outdir=./dist --bundle --format=cjs --minify --platform=node",
-    "postbuild": "npm run copy-assets",
+    "build": "rm -rf dist && npm run bundle && npm run copy-assets",
+    "bundle": "esbuild ./src/index.js --outdir=./dist --bundle --format=cjs --minify --platform=node",
     "copy-assets": "cp -r ./assets/legacy-tokens.css ./dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
