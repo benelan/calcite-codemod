@@ -20,15 +20,21 @@
   },
   "license": "MIT",
   "author": "Ben Elan",
-  "main": "./dist/index.js",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js",
+    "default": "./dist/index.js"
+  },
   "bin": {
-    "calcite-codemod": "./dist/index.js"
+    "calcite-codemod": "./dist/cli.js"
   },
   "files": [
     "dist/"
   ],
   "scripts": {
-    "build": "esbuild ./src/index.js --outdir=./dist --bundle --format=cjs --minify --platform=node",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "esbuild ./src/index.js ./src/cli.js --outdir=./dist --bundle --format=cjs --minify --platform=node",
+    "build:esm": "esbuild ./src/index.js --outfile=./dist/index.mjs --bundle --format=esm --minify --platform=node",
     "postbuild": "npm run copy-assets",
     "copy-assets": "cp -r ./assets/legacy-tokens.css ./dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
