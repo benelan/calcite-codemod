@@ -11,7 +11,7 @@ const args = process.argv.slice(2);
 console.log(
   "Replace CSS variables that were effected by the breaking changes in v2 of Calcite Components.",
   `${EOL}See the v2 changelog section for the full list of breaking changes:`,
-  `${EOL}https://github.com/Esri/calcite-design-system/blob/main/packages/calcite-components/CHANGELOG.md#200-2023-12-02`,
+  `${EOL}https://github.com/Esri/calcite-design-system/blob/main/packages/calcite-components/CHANGELOG.md#200-2023-12-02${EOL}`,
 );
 
 if (args.length === 0) {
@@ -69,11 +69,11 @@ console.log("Replacing occurrences now, this may take a while...");
   }
 
   console.log(
-    `${EOL}There were a total of ${modifiedOccurrences} CSS variables replaced in ${filesModified.size} files (out of ${allFiles.size} files checked.)`,
+    `${EOL}There were a total of ${modifiedOccurrences} CSS variables replaced in ${filesModified.size} files (out of ${allFiles.size} files checked)`,
   );
 
   const output = JSON.stringify(allResults, null, 2);
-  const outfile = `calcite-codemod-results-${Date.now()}.json`;
+  const outfile = `calcite-codemod-${Date.now()}.json`;
 
   try {
     await writeFile(resolve(".", outfile), output);
@@ -95,7 +95,7 @@ console.log("Replacing occurrences now, this may take a while...");
  * @param  {...any} messages - info for stderr
  */
 function help(...messages) {
-  messages && console.error(EOL, ...messages);
+  messages && console.error(...messages);
   console.error(
     `${EOL}${EOL}See the project homepage for usage information:${EOL}https://github.com/benelan/calcite-codemod`,
   );
