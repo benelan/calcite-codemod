@@ -29,8 +29,6 @@ npx @ben-elan/calcite-codemod "styles.css" "index.html" "src/*.js"
 
 > **NOTE:** You cannot specify the version of a package when using `npx`, so make sure the current major version of `@ben-elan/calcite-codemod` aligns with your major version of `@esri/calcite-components`. Otherwise, use one of the previous installation methods above.
 
-> <br>
-
 ## Using the CLI
 
 `@ben-elan/calcite-codemod` provides a command line interface (CLI), which renames the CSS Variables in your application.
@@ -56,7 +54,6 @@ This package also contains a CSS file that maps all the old variable names to th
 Add this to your application so you can update to Calcite Components v2 before renaming all the CSS Variables.
 
 ```html
-<!-- index.html -->
 <script
   type="module"
   src="https://cdn.jsdelivr.net/npm/@esri/calcite-components@v2/dist/calcite/calcite.esm.js"
@@ -66,11 +63,11 @@ Add this to your application so you can update to Calcite Components v2 before r
   type="text/css"
   href="https://cdn.jsdelivr.net/npm/@esri/calcite-components@v2/dist/calcite/calcite.css"
 />
+
+<!-- Make sure to add `legacy-tokens.css` after `calcite.css` -->
 <link
   rel="stylesheet"
   type="text/css"
   href="https://cdn.jsdelivr.net/npm/@ben-elan/calcite-codemod@v2/dist/legacy-tokens.css"
 />
 ```
-
-> **NOTE:**: Make sure to add `legacy-tokens.css` after `calcite.css`
