@@ -34,7 +34,7 @@ npx @ben-elan/calcite-codemod "styles.css" "index.html" "src/*.js"
 ## Using the CLI
 
 `@ben-elan/calcite-codemod` provides a command line interface (CLI), which renames the CSS Variables in your application.
-The CLI requires one or more arguments specifying which files/directories to update. The arguments accept glob syntax.
+The CLI requires one or more arguments specifying which files/directories to update. The arguments support glob syntax.
 For more information, see this [Glob primer](https://github.com/isaacs/node-glob#glob-primer) by the package used internally for expanding globs.
 
 Here are a couple usage examples:
@@ -47,19 +47,19 @@ calcite-codemod "styles.css" "index.html" "src/*.js"
 calcite-codemod "src/**/*.{js,ts,jsx,tsx,css,scss}"
 
 # same as the previous example, except a lot more confusing
-calcite-code-mod "src/**/*.{{j,t}s{x,},{s,}css}"
+calcite-codemod "src/**/*.{{j,t}s{x,},{s,}css}"
 ```
 
 ## Using the CSS
 
 This package also contains a CSS file that maps all the old variable names to the new ones.
-Add this to your application so you can update to Calcite Components v2 before renaming all of the CSS Variables.
+Add this to your application so you can update to Calcite Components v2 before renaming all the CSS Variables.
 
 ```html
 <!-- index.html -->
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://unpkg.com/@ben-elan/calcite-codemod@v2/dist/legacy-tokens.css"
-/>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@esri/calcite-components@v2/dist/calcite/calcite.esm.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@esri/calcite-components@v2/dist/calcite/calcite.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@ben-elan/calcite-codemod@v2/dist/legacy-tokens.css" />
 ```
+
+> **NOTE:**: Make sure to add `legacy-tokens.css` after `calcite.css`
