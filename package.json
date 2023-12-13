@@ -1,6 +1,6 @@
 {
   "name": "calcite-codemod",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "Code modification tool for automatically updating applications after breaking changes to Calcite Design System packages",
   "keywords": [
     "calcite",
