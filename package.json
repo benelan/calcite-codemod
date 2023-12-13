@@ -1,14 +1,14 @@
 {
   "name": "calcite-codemod",
   "version": "2.0.5",
-  "description": "Codemod scripts for automatically updating applications after breaking changes to Calcite Design System packages",
+  "description": "Code modification tool for automatically updating applications after breaking changes to Calcite Design System packages",
   "keywords": [
     "calcite",
     "calcite-components",
     "calcite-design-system",
+    "calcite-design-tokens",
     "cli",
-    "codemod",
-    "node"
+    "codemod"
   ],
   "homepage": "https://github.com/benelan/calcite-codemod",
   "bugs": {
@@ -34,7 +34,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "esbuild": "^0.19.8",
+    "esbuild": "^0.19.9",
     "replace-in-file": "^7.0.2"
   },
   "volta": {
