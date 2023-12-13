@@ -9,29 +9,29 @@ Please read the [v2 changelog section of Calcite Components](https://github.com/
 
 ## Installation
 
-Install [the package](https://www.npmjs.com/package/@ben-elan/calcite-codemod) globally and use it anywhere:
+Install [the package](https://www.npmjs.com/package/calcite-codemod) globally and use it anywhere:
 
 ```bash
-npm i -g @ben-elan/calcite-codemod@v2
+npm i -g calcite-codemod@v2
 ```
 
 Use it in a single application:
 
 ```bash
-npm i -D @ben-elan/calcite-codemod@v2
+npm i -D calcite-codemod@v2
 ```
 
 Or try it out before installing:
 
 ```bash
-npx @ben-elan/calcite-codemod "styles.css" "index.html" "src/*.js"
+npx calcite-codemod "styles.css" "index.html" "src/*.js"
 ```
 
-> **NOTE:** You cannot specify the version of a package when using `npx`, so make sure the current major version of `@ben-elan/calcite-codemod` aligns with your major version of `@esri/calcite-components`. Otherwise, use one of the previous installation methods above.
+> **NOTE:** You cannot specify the version of a package when using `npx`, so make sure the current major version of `calcite-codemod` aligns with your major version of `@esri/calcite-components`. Otherwise, use one of the previous installation methods above.
 
 ## Using the CLI
 
-`@ben-elan/calcite-codemod` provides a command line interface (CLI), which renames the CSS Variables in your application.
+`calcite-codemod` provides a command line interface (CLI), which renames the CSS Variables in your application.
 The CLI requires one or more arguments specifying which files/directories to update. The arguments support glob syntax.
 For more information, see this [Glob primer](https://github.com/isaacs/node-glob#glob-primer) by the package used internally for expanding globs.
 
@@ -68,6 +68,6 @@ Add this to your application so you can update to Calcite Components v2 before r
 <link
   rel="stylesheet"
   type="text/css"
-  href="https://cdn.jsdelivr.net/npm/@ben-elan/calcite-codemod@v2/dist/legacy-tokens.css"
+  href="https://cdn.jsdelivr.net/npm/calcite-codemod@v2/dist/legacy-tokens.css"
 />
 ```

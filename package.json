@@ -1,5 +1,5 @@
 {
-  "name": "@ben-elan/calcite-codemod",
+  "name": "calcite-codemod",
   "version": "2.0.5",
   "description": "Codemod scripts for automatically updating applications after breaking changes to Calcite Design System packages",
   "keywords": [
